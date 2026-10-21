@@ -1,5 +1,5 @@
 'use strict';
-document.querySelectorAll('button[aria-controls^="summary-"]').forEach(button => {
+document.querySelectorAll('button[aria-controls^="summary-"], button[aria-controls^="abstract-"]').forEach(button => {
   button.addEventListener('click', () => {
     const summary = document.getElementById(button.getAttribute('aria-controls'));
     summary.hidden = !summary.hidden;
