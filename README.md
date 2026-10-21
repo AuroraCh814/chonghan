@@ -2,7 +2,7 @@
 
 A static academic website for GitHub Pages.
 
-The layout, Roboto typography, and restrained palette follow the academic style of [Seunghun Oh’s website](https://alvin0808.github.io/). All text describes Chong Han’s own background and work. No generated images or illustrations are used.
+The site has a white-and-navy academic design, serif headings, Inter body text, and a portrait supplied by Chong Han. No generated images or illustrations are used. Contact: chonghan@sas.upenn.edu.
 
 ## Pages
 
@@ -13,7 +13,7 @@ The layout, Roboto typography, and restrained palette follow the academic style 
 
 ## Publishing
 
-The site is hosted from `AuroraCh814/aurorach814.github.io` on the `main` branch. GitHub Pages uses **Deploy from a branch → main → / (root)**. The `.nojekyll` file makes GitHub serve the files directly.
+The site is hosted from `AuroraCh814/chonghan` on the `main` branch. GitHub Pages uses **Deploy from a branch → main → / (root)**. The `.nojekyll` file makes GitHub serve the files directly.
 
 ## Editing
 
