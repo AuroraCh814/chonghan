@@ -2,7 +2,7 @@
 
 A static academic website for GitHub Pages.
 
-The site has a white-and-navy academic design, serif headings, Inter body text, and a portrait supplied by Chong Han. No generated images or illustrations are used. Contact: chonghan@sas.upenn.edu.
+The site uses a simple black-and-white academic layout, Roboto typography, plain text links, and a portrait supplied by Chong Han. No generated images or illustrations are used. Contact: chonghan@sas.upenn.edu.
 
 ## Pages
 
