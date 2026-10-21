@@ -6,10 +6,8 @@ The site uses a simple black-and-white academic layout, Roboto typography, plain
 
 ## Pages
 
-- `index.html`: About and selected publications
-- `publications/`: Publications and submitted work
-- `projects/`: Research overviews
-- `cv/`: Academic background
+- `index.html`: About and published research
+- `publications/`: Published research
 
 ## Publishing
 
