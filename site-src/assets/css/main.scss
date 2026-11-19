@@ -1,0 +1,41 @@
+---
+---
+@charset "utf-8";
+$max-content-width: {{ site.max_width }};
+$black-color: #000;
+$white-color: #fff;
+:root {
+  color-scheme: light;
+  --global-bg-color: #fff;
+  --global-text-color: #111;
+  --global-text-color-light: #555;
+  --global-theme-color: #111;
+  --global-hover-color: #111;
+  --global-hover-text-color: #fff;
+  --global-footer-bg-color: #1c1c1d;
+  --global-footer-text-color: #e8e8e8;
+  --global-footer-link-color: #fff;
+  --global-divider-color: rgba(0, 0, 0, .14);
+  --global-card-bg-color: #fff;
+}
+@import "layout", "base";
+body { font-family: Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 300; }
+.navbar { background: white; border-bottom: 1px solid var(--global-divider-color); }
+.navbar .icon-bar { display:block; width: 22px; height:2px; background: #222; margin: 4px 0; }
+.post .selected-publications, .contact-links { clear: both; }
+.publications ol.bibliography li .links button,
+.publications ol.bibliography li .links a { font: inherit; font-size: .8125rem; }
+.publications ol.bibliography li .links button.btn { color: var(--global-text-color); background: transparent; border: 1px solid currentColor; padding: .25rem 1rem; }
+.publications ol.bibliography li .links button:focus-visible, .publications ol.bibliography li .links a:focus-visible { outline: 2px solid #222; outline-offset: 2px; }
+.publications ol.bibliography li .pub-panel { margin-top: .65rem; }
+.publications ol.bibliography li .pub-panel p { margin: 0 0 .5rem; }
+.publications ol.bibliography li .pub-panel[hidden] { display: none; }
+.publications ol.bibliography li .pub-row { align-items: flex-start; }
+.publications .pub-preview figure { margin: 0; }
+.publications .pub-preview img { display: block; width:100%; max-width:250px; height:auto; object-fit: contain; }
+.publications .pub-info { min-width:0; }
+@media (max-width:575.98px) {
+  .publications .pub-row.has-preview { flex-wrap: nowrap; }
+  .publications .has-preview .pub-preview { flex: 0 0 27%; max-width:27%; padding-right:5px; }
+  .publications .has-preview .pub-info { flex: 1 1 auto; padding-left:5px; }
+}

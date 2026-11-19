@@ -1,149 +1,328 @@
 <!doctype html>
 <html lang="en">
+  <!-- Head -->
   <head>
+    
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-    <title>Chong Han</title>
-    <meta name="description" content="Chong Han — Applied Mathematics and Computational Science at Penn. Reliable autonomous systems, autonomous driving, safety-critical control, and robotics.">
-    <link rel="icon" href="data:,">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/style.css">
-    <script src="./assets/site.js" defer></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chong Han</title>
+<meta name="description" content="Chong Han — robot learning and optimal control at the University of Pennsylvania.">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:,">
+<link rel="canonical" href="https://aurorach814.github.io/chonghan/">
+<link rel="stylesheet" href="/chonghan/assets/css/bootstrap.min.css">
+<link rel="stylesheet" href="/chonghan/assets/css/main.css">
+<link rel="stylesheet" href="/chonghan/assets/css/profile.css">
+
   </head>
-  <body>
-    <a class="skip" href="#main">Skip to content</a>
 
-    <header class="navbar">
-      <div class="container nav-inner">
-        <span></span>
-        <button class="mobile-toggle" type="button" aria-expanded="false" aria-controls="nav-links">Menu</button>
-        <nav id="nav-links" aria-label="Main navigation">
-          <a href="./" aria-current="page">about</a>
-          <a href="./publications/">publications</a>
-        </nav>
+  <!-- Body -->
+  <body class="fixed-top-nav ">
+    <!-- Header -->
+    <header>
+  <!-- Nav Bar -->
+  <nav id="navbar" class="navbar navbar-light navbar-expand-sm fixed-top" role="navigation">
+    <div class="container">
+      
+      <!-- Navbar Toggle -->
+      <button
+        class="navbar-toggler collapsed ml-auto"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar top-bar"></span>
+        <span class="icon-bar middle-bar"></span>
+        <span class="icon-bar bottom-bar"></span>
+      </button>
+
+      <div class="collapse navbar-collapse text-right" id="navbarNav">
+        <ul class="navbar-nav ml-auto flex-nowrap">
+          
+
+          <!-- About -->
+          <li class="nav-item active">
+            <a class="nav-link" href="/chonghan/">about
+              
+                <span class="sr-only">(current)</span>
+              
+            </a>
+          </li>
+
+          <!-- Other pages -->
+          
+          
+            
+          
+            
+          
+            
+              
+                
+                <li class="nav-item ">
+                  <a class="nav-link" href="/chonghan/publications/">publications
+                    
+                  </a>
+                </li>
+              
+            
+          
+          
+          
+        </ul>
       </div>
-    </header>
+    </div>
+  </nav>
+  
+</header>
 
-    <main class="container" id="main">
-      <header class="page-header">
-        <h1>Chong Han</h1>
-      </header>
 
-      <article class="about-content">
-        <figure class="profile">
-          <img src="./assets/chong-han.jpg" alt="Chong Han outdoors in a mountain landscape" width="1086" height="724">
-        </figure>
-        <p>I am a master’s student in <a href="https://amcs.upenn.edu/" target="_blank" rel="noopener noreferrer"><strong>Applied Mathematics and Computational Science at the University of Pennsylvania</strong></a>. I am currently advised by <a href="https://nikolaimatni.github.io/" target="_blank" rel="noopener noreferrer"><strong>Prof. Nikolai Matni</strong></a>.</p>
-        <p>Previously, I received my B.S. in Mathematics of Computation from UCLA, where I was advised by <a href="https://chentangmark.github.io/" target="_blank" rel="noopener noreferrer"><strong>Prof. Chen Tang</strong></a> in the <a href="https://chentangmark.github.io/lab/" target="_blank" rel="noopener noreferrer"><strong>Trustworthy Autonomous Mobility Systems (TAMS) Lab</strong></a>.</p>
-        <p>During my undergraduate studies, I explored a range of topics, including financial mathematics, combinatorics, large language models, multimodal large language models, and vision-language models.</p>
-        <p>My primary interests are now robot learning, optimal control, and their intersection. My long-term goal is to build reliable, controllable, and safe robotic and autonomous systems for the real world.</p>
-      </article>
+    <!-- Content -->
+    <div class="container mt-5" role="main">
+      
+        <div class="post">
+  <header class="post-header">
+    <h1 class="post-title">
+      
+        Chong Han
+      
+    </h1>
+    
+  </header>
 
-      <section class="selected-publications">
-        <h2>Selected Publications</h2>
-        <ol class="publication-list">
+  <article>
+    
+      <div class="profile float-right">
+        
+          
+          
+          
+          
 
-          <li id="power-permutations">
-            <div class="pub-title">Adding–swapping mappings for k-th power permutations in Sₙ</div>
-            <div class="authors">Yomi Anifowoshe and <strong>Chong Han</strong></div>
-            <div class="venue">Ars Combinatoria, 167, 213–223, 2026</div>
-            <div class="pub-actions">
-              <button type="button" class="outline" aria-expanded="false" aria-controls="summary-power-permutations">summary</button>
-              <button type="button" class="outline" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-power-permutations">abs</button>
-              <a class="outline" href="https://doi.org/10.61091/ars167-14" target="_blank" rel="noopener noreferrer">paper</a>
-            </div>
-            <div class="pub-summary" id="summary-power-permutations" hidden>
-              <p>A study of adding–swapping insertion maps for higher-power permutations, using cycle-count signatures and local residue transitions to characterize the structure and limitations of these maps.</p>
-            </div>
-            <div class="pub-summary pub-abstract" id="abstract-power-permutations" hidden>
-              <p><strong>Abstract</strong></p>
-              <p>Recently, Luo [3] introduced the Adding–Swapping Mapping Method to provide an alternative and constructive proof of Stanley’s [4] conjecture on perfect square permutations in Sₙ and asked whether the method extends to higher powers. In this paper we answer that question in a more limited but precise structural sense.</p>
-              <p>For each fixed k ≥ 2, we define the k-signature Rₖ(w) recording the cycle-count vector modulo gcd(m,k) in each length m, and we prove a local residue transition law describing how the insertion map Dᵢ updates the signature once the cycle length of the insertion point is specified. We also prove explicitly that every k-th power permutation has zero k-signature, so the signature gives a necessary obstruction to being a k-th power.</p>
-              <p>This yields a residue-based partition of Sₙ that serves as an indexing scheme for insertion updates. We then show that for k ≥ 3 the insertion family does not preserve the class of k-th powers, explaining why the square case is exceptional from the standpoint of Luo’s method. Finally, we include explicit small-n data for k=3,4 and prove that the density of k-th powers in Sₙ tends to 0 as n → ∞.</p>
-              <p><a class="outline" href="https://combinatorialpress.com/ars-articles/volume-167/adding-swapping-mappings-for-k-th-power-permutations-in-s_n/" target="_blank" rel="noopener noreferrer">Abstract source</a></p>
-            </div>
-          </li>
 
-          <li id="s3">
-            <div class="pub-title">Seizure-Semiology-Suite (S³): A Clinically Multimodal Dataset, Benchmark, and Models for Seizure Semiology Understanding</div>
-            <div class="authors">Lina Zhang, Tonmoy Monsoor, Peizheng Li, Jiarui Cui, Xinyi Peng, <strong>Chong Han</strong>, et al.</div>
-            <div class="venue">International Conference on Machine Learning (ICML), 2026</div>
-            <div class="pub-note">Spotlight</div>
-            <div class="pub-actions">
-              <button type="button" class="outline" aria-expanded="false" aria-controls="summary-s3">summary</button>
-              <button type="button" class="outline" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-s3">abs</button>
-              <a class="outline" href="https://arxiv.org/abs/2605.21852" target="_blank" rel="noopener noreferrer">paper</a>
-            </div>
-            <div class="pub-summary" id="summary-s3" hidden>
-              <p>A clinically grounded multimodal dataset and benchmark for studying how machine learning models interpret seizure semiology, from visual features to structured reports.</p>
-            </div>
-            <div class="pub-summary pub-abstract" id="abstract-s3" hidden>
-              <p><strong>Abstract</strong></p>
-              <p>While Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in general video understanding, their capacity to interpret involuntary, and spatio-temporally evolving pathologic motor behaviors such as seizure semiology remains largely untested. To address this gap, we introduce Seizure-Semiology-Suite (S³), a clinically grounded dataset and benchmark for fine-grained, structured seizure semiology understanding.</p>
-              <p>The dataset includes 438 seizure videos annotated with over 35,000 dense labels covering 20 ILAE-defined semiological features. Building on this dataset, we propose a seven-task hierarchical benchmark that systematically evaluates MLLMs from low-level visual perception to temporal sequencing, narrative report generation, and seizure diagnosis. To enable clinically meaningful evaluation of generated reports, we further introduce the Report Quality Index for Seizure Semiology (Seizure-RQI).</p>
-              <p>Extensive baselines across 11 open-weight MLLMs reveal systematic weaknesses in laterality reasoning, temporal localization, symptom sequencing, and clinically faithful reporting. We show that seizure-specific fine-tuning substantially improves performance across tasks, and that a two-stage neuro-symbolic framework achieves an F1 score of 0.96 on epileptic versus non-epileptic seizure classification.</p>
-              <p>Seizure-Semiology-Suite establishes a rigorous benchmark for evaluating multimodal models in safety-critical medical video understanding and guides the development of clinically reliable, domain-adaptive multimodal intelligence. Our code is publicly available at https://github.com/LinaZhangUCLA/SeizureSemiologySuite.</p>
-              <p><a class="outline" href="https://proceedings.mlr.press/v306/zhang26el.html" target="_blank" rel="noopener noreferrer">Abstract source</a></p>
-            </div>
-          </li>
 
-          <li id="pathologic-movements">
-            <div class="pub-title">Can Multimodal Large Language Models Understand Pathologic Movements? A Pilot Study on Seizure Semiology</div>
-            <div class="authors">Lina Zhang, Tonmoy Monsoor, Mehmet Efe Lorasdagi, Prateik Sinha, <strong>Chong Han</strong>, et al.</div>
-            <div class="venue">IEEE Engineering in Medicine and Biology Conference (EMBC), 2026</div>
-            <div class="pub-actions">
-              <button type="button" class="outline" aria-expanded="false" aria-controls="summary-pathologic-movements">summary</button>
-              <button type="button" class="outline" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-pathologic-movements">abs</button>
-              <a class="outline" href="https://arxiv.org/abs/2605.03352" target="_blank" rel="noopener noreferrer">paper</a>
-            </div>
-            <div class="pub-summary" id="summary-pathologic-movements" hidden>
-              <p>An evaluation of multimodal language models on clinical seizure recordings, with feature-specific preprocessing and expert assessment of their explanations.</p>
-            </div>
-            <div class="pub-summary pub-abstract" id="abstract-pathologic-movements" hidden>
-              <p><strong>Abstract</strong></p>
-              <p>Multimodal Large Language Models (MLLMs) have demonstrated robust capabilities in recognizing everyday human activities, yet their potential for analyzing clinically significant involuntary movements in neurological disorders remains largely unexplored. This pilot study evaluates the capability of MLLMs for automated recognition of pathological movements in seizure videos.</p>
-              <p>We assessed the zero-shot performance of state-of-the-art MLLMs on 20 ILAE-defined semiological features across 90 clinical seizure recordings. MLLMs outperformed fine-tuned Convolutional Neural Network (CNN) and Vision Transformer (ViT) baseline models on 13 of 18 features without task-specific training, demonstrating particular strength in recognizing salient postural and contextual features while struggling with subtle, high-frequency movements.</p>
-              <p>Feature-targeted signal enhancement (facial cropping, pose estimation, audio denoising) improved performance on 10 of 20 features. Expert evaluation showed that 94.3 percent of MLLM-generated explanations for correctly predicted cases achieved at least 60 percent faithfulness scores, aligning with epileptologist reasoning.</p>
-              <p>These findings demonstrate the potential of adapting general-purpose MLLMs for specialized clinical video analysis through targeted preprocessing strategies, offering a path toward interpretable, efficient diagnostic assistance. Our code is publicly available at https://github.com/LinaZhangUCLA/PathMotionMLLM.</p>
-              <p><a class="outline" href="https://arxiv.org/abs/2605.03352" target="_blank" rel="noopener noreferrer">Abstract source</a></p>
-            </div>
-          </li>
+<figure
+  
+>
+  <picture>
+    <!-- Auto scaling with imagemagick -->
+    <!--
+      See https://www.debugbear.com/blog/responsive-images#w-descriptors-and-the-sizes-attribute and
+      https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images for info on defining 'sizes' for responsive images
+    -->
+    
+    <img
+      src="/chonghan/assets/img/chong-han.jpg"
+      
+        class="img-fluid z-depth-1
+      rounded"
+      
+      
+      
+      
+      
+        alt="Chong Han outdoors in a mountain landscape"
+      
+      
+      
+      
+        loading="eager"
+      
+    >
+  </picture>
 
-          <li id="exchange-rates">
-            <div class="pub-title">Crisis-dependent linkages in major exchange rates</div>
-            <div class="authors">Oyakhilome Ibhagui, James Evans, Tolulope Fadina, Florian Gerth, and <strong>Chong Han</strong></div>
-            <div class="venue">Journal of International Financial Markets, Institutions and Money, 109, 102333, 2026</div>
-            <div class="pub-actions">
-              <button type="button" class="outline" aria-expanded="false" aria-controls="summary-exchange-rates">summary</button>
-              <button type="button" class="outline" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-exchange-rates">abs</button>
-              <a class="outline" href="https://doi.org/10.1016/j.intfin.2026.102333" target="_blank" rel="noopener noreferrer">paper</a>
-            </div>
-            <div class="pub-summary" id="summary-exchange-rates" hidden>
-              <p>An empirical study of how the relationships among major exchange rates vary across crisis and non-crisis periods.</p>
-            </div>
-            <div class="pub-summary pub-abstract" id="abstract-exchange-rates" hidden>
-              <p><strong>Abstract</strong></p>
-              <p>This paper investigates why some global crises forge long-term links among major currencies, while others fracture them. We address two important questions in currency markets during crises: (1) whether cointegration relationships of major currencies are preserved across distinct crisis episodes, and (2) whether long-horizon currency returns exhibit lower correlation as currency autonomy strengthens. We present a model in which exchange rates load on global stochastic trends under autonomy.</p>
-              <p>The model implies that the survival of cointegrating relations is determined jointly by the rank of the pass-through matrix and the level of autonomy. We then take our model to market data and empirically analyze five major currency pairs against the U.S. dollar (USD): EUR/USD, GBP/USD, JPY/USD, CHF/USD, and AUD/USD across three regimes: the dot-com crash (1997–2000), the Global Financial Crisis (2007–2009), and the COVID-19 pandemic (2020–2022).</p>
-              <p>We find that the Global Financial Crisis (GFC) uniquely produced a cointegrating relation, with deviations corrected by EUR/USD, CHF/USD, and GBP/USD over two- to five-week half-lives, while the dot-com crash and the COVID-19 pandemic exhibit no cointegration. Our long-horizon correlation results further show that weaker currency return comovement during a crisis is associated with weaker or absent cointegration.</p>
-              <p>Our results also demonstrate that crises differ in their long-run effects: only when shocks are both globally systemic and USD-centered are stable long-run anchors preserved. Overall, we show that systemic USD-centered stress compresses autonomy, which causes currencies to load similarly and yields a stable anchor, while heterogeneous or novel persistent shocks dissolve this cointegration.</p>
-              <p><a class="outline" href="https://ideas.repec.org/a/eee/intfin/v109y2026ics1042443126000491.html" target="_blank" rel="noopener noreferrer">Abstract source</a></p>
-            </div>
-          </li>
-        </ol>
-        <p><a href="./publications/">All publications</a></p>
-      </section>
+  
+</figure>
 
-      <section class="social" aria-label="Contact links">
-        <p><a href="mailto:chonghan@sas.upenn.edu">Email</a> &nbsp; / &nbsp; <a href="https://scholar.google.com/citations?user=S0XnNBwAAAAJ&amp;hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a> &nbsp; / &nbsp; <a href="https://github.com/AuroraCh814" target="_blank" rel="noopener noreferrer">GitHub</a> &nbsp; / &nbsp; <a href="https://www.linkedin.com/in/chong-han-539697333/" target="_blank" rel="noopener noreferrer">LinkedIn</a></p>
-      </section>
-    </main>
+        
+        
+      </div>
+    
 
-    <footer>
-      <div class="container">© Copyright 2026 Chong Han. <a href="mailto:chonghan@sas.upenn.edu">chonghan@sas.upenn.edu</a></div>
-    </footer>
+    <div class="clearfix"><p>I am a master’s student in <a href="https://amcs.upenn.edu/" target="_blank" rel="noopener noreferrer"><strong>Applied Mathematics and Computational Science at the University of Pennsylvania</strong></a>. I am currently advised by <a href="https://nikolaimatni.github.io/" target="_blank" rel="noopener noreferrer"><strong>Prof. Nikolai Matni</strong></a>.</p>
+
+<p>Previously, I received my B.S. in Mathematics of Computation from UCLA, where I was advised by <a href="https://chentangmark.github.io/" target="_blank" rel="noopener noreferrer"><strong>Prof. Chen Tang</strong></a> in the <a href="https://chentangmark.github.io/lab/" target="_blank" rel="noopener noreferrer"><strong>Trustworthy Autonomous Mobility Systems (TAMS) Lab</strong></a>.</p>
+
+<p>During my undergraduate studies, I explored a range of topics, including financial mathematics, combinatorics, large language models, multimodal large language models, and vision-language models.</p>
+
+<p>My primary interests are now robot learning, optimal control, and their intersection. My long-term goal is to build reliable, controllable, and safe robotic and autonomous systems for the real world.</p>
+</div>
+
+    <!-- News -->
+    
+
+    <!-- Latest posts -->
+    
+
+    <!-- Selected papers -->
+    
+      <h2>
+        <a href="/chonghan/publications/" style="color: inherit">Selected Publications</a>
+      </h2>
+      <div class="publications">
+  <ol class="bibliography"><li><div class="row pub-row" id="power-permutations">
+  
+  <div class="col-12 pub-info">
+    <div class="title">Adding–swapping mappings for k-th power permutations in Sₙ</div>
+    <div class="author">Yomi Anifowoshe and <em>Chong Han</em></div>
+    <div class="periodical">
+      
+        <em>Ars Combinatoria, 167, 213–223, 2026</em>
+      
+    </div>
+    
+    
+    <div class="links">
+      <button type="button" class="btn btn-sm z-depth-0" aria-expanded="false" aria-controls="summary-power-permutations">summary</button>
+      <button type="button" class="btn btn-sm z-depth-0" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-power-permutations">abs</button>
+      <a href="https://doi.org/10.61091/ars167-14" class="btn btn-sm z-depth-0">paper</a>
+      
+    </div>
+    <div class="pub-panel" id="summary-power-permutations" hidden><p>A study of adding–swapping insertion maps for higher-power permutations, using cycle-count signatures and local residue transitions to characterize the structure and limitations of these maps.</p></div>
+    
+      <div class="pub-panel" id="abstract-power-permutations" hidden>
+        <p><strong>Abstract</strong></p><p>Recently, Luo [3] introduced the Adding–Swapping Mapping Method to provide an alternative and constructive proof of Stanley’s [4] conjecture on perfect square permutations in Sₙ and asked whether the method extends to higher powers. In this paper we answer that question in a more limited but precise structural sense. For each fixed k ≥ 2, we define the k-signature Rₖ(w) recording the cycle-count vector modulo gcd(m,k) in each length m, and we prove a local residue transition law describing how the insertion map Dᵢ updates the signature once the cycle length of the insertion point is specified. We also prove explicitly that every k-th power permutation has zero k-signature, so the signature gives a necessary obstruction to being a k-th power. This yields a residue-based partition of Sₙ that serves as an indexing scheme for insertion updates. We then show that for k ≥ 3 the insertion family does not preserve the class of k-th powers, explaining why the square case is exceptional from the standpoint of Luo’s method. Finally, we include explicit small-n data for k=3,4 and prove that the density of k-th powers in Sₙ tends to 0 as n → ∞.</p>
+        <p><a href="https://combinatorialpress.com/ars-articles/volume-167/adding-swapping-mappings-for-k-th-power-permutations-in-s_n/">Abstract source</a></p>
+      </div>
+    
+  </div>
+</div>
+</li>
+<li><div class="row pub-row" id="s3">
+  
+  <div class="col-12 pub-info">
+    <div class="title">Seizure-Semiology-Suite (S³): A Clinically Multimodal Dataset, Benchmark, and Models for Seizure Semiology Understanding</div>
+    <div class="author">Lina Zhang, Tonmoy Monsoor, Peizheng Li, Jiarui Cui, Xinyi Peng, <em>Chong Han</em>, et al.</div>
+    <div class="periodical">
+      
+        <em>International Conference on Machine Learning (ICML), 306, 157800–157840, 2026</em>
+      
+    </div>
+    <div class="periodical"><strong>Spotlight</strong></div>
+    
+    <div class="links">
+      <button type="button" class="btn btn-sm z-depth-0" aria-expanded="false" aria-controls="summary-s3">summary</button>
+      <button type="button" class="btn btn-sm z-depth-0" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-s3">abs</button>
+      <a href="https://arxiv.org/abs/2605.21852" class="btn btn-sm z-depth-0">paper</a>
+      
+    </div>
+    <div class="pub-panel" id="summary-s3" hidden><p>A clinically grounded multimodal dataset and benchmark for studying how machine learning models interpret seizure semiology, from visual features to structured reports.</p></div>
+    
+      <div class="pub-panel" id="abstract-s3" hidden>
+        <p><strong>Abstract</strong></p><p>While Multimodal Large Language Models (MLLMs) have demonstrated remarkable proficiency in general video understanding, their capacity to interpret involuntary, and spatio-temporally evolving pathologic motor behaviors such as seizure semiology remains largely untested. To address this gap, we introduce Seizure-Semiology-Suite (S³), a clinically grounded dataset and benchmark for fine-grained, structured seizure semiology understanding. The dataset includes 438 seizure videos annotated with over 35,000 dense labels covering 20 ILAE-defined semiological features. Building on this dataset, we propose a seven-task hierarchical benchmark that systematically evaluates MLLMs from low-level visual perception to temporal sequencing, narrative report generation, and seizure diagnosis. To enable clinically meaningful evaluation of generated reports, we further introduce the Report Quality Index for Seizure Semiology (Seizure-RQI). Extensive baselines across 11 open-weight MLLMs reveal systematic weaknesses in laterality reasoning, temporal localization, symptom sequencing, and clinically faithful reporting. We show that seizure-specific fine-tuning substantially improves performance across tasks, and that a two-stage neuro-symbolic framework achieves an F1 score of 0.96 on epileptic versus non-epileptic seizure classification. Seizure-Semiology-Suite establishes a rigorous benchmark for evaluating multimodal models in safety-critical medical video understanding and guides the development of clinically reliable, domain-adaptive multimodal intelligence. Our code is publicly available at https://github.com/LinaZhangUCLA/SeizureSemiologySuite.</p>
+        <p><a href="https://proceedings.mlr.press/v306/zhang26el.html">Abstract source</a></p>
+      </div>
+    
+  </div>
+</div>
+</li>
+<li><div class="row pub-row" id="pathologic-movements">
+  
+  <div class="col-12 pub-info">
+    <div class="title">Can Multimodal Large Language Models Understand Pathologic Movements? A Pilot Study on Seizure Semiology</div>
+    <div class="author">Lina Zhang, Tonmoy Monsoor, Mehmet Efe Lorasdagi, Prateik Sinha, <em>Chong Han</em>, et al.</div>
+    <div class="periodical">
+      
+        <em>IEEE Engineering in Medicine and Biology Conference (EMBC), 2026</em>
+      
+    </div>
+    
+    
+    <div class="links">
+      <button type="button" class="btn btn-sm z-depth-0" aria-expanded="false" aria-controls="summary-pathologic-movements">summary</button>
+      <button type="button" class="btn btn-sm z-depth-0" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-pathologic-movements">abs</button>
+      <a href="https://arxiv.org/abs/2605.03352" class="btn btn-sm z-depth-0">paper</a>
+      
+    </div>
+    <div class="pub-panel" id="summary-pathologic-movements" hidden><p>An evaluation of multimodal language models on clinical seizure recordings, with feature-specific preprocessing and expert assessment of their explanations.</p></div>
+    
+      <div class="pub-panel" id="abstract-pathologic-movements" hidden>
+        <p><strong>Abstract</strong></p><p>Multimodal Large Language Models (MLLMs) have demonstrated robust capabilities in recognizing everyday human activities, yet their potential for analyzing clinically significant involuntary movements in neurological disorders remains largely unexplored. This pilot study evaluates the capability of MLLMs for automated recognition of pathological movements in seizure videos. We assessed the zero-shot performance of state-of-the-art MLLMs on 20 ILAE-defined semiological features across 90 clinical seizure recordings. MLLMs outperformed fine-tuned Convolutional Neural Network (CNN) and Vision Transformer (ViT) baseline models on 13 of 18 features without task-specific training, demonstrating particular strength in recognizing salient postural and contextual features while struggling with subtle, high-frequency movements. Feature-targeted signal enhancement (facial cropping, pose estimation, audio denoising) improved performance on 10 of 20 features. Expert evaluation showed that 94.3 percent of MLLM-generated explanations for correctly predicted cases achieved at least 60 percent faithfulness scores, aligning with epileptologist reasoning. These findings demonstrate the potential of adapting general-purpose MLLMs for specialized clinical video analysis through targeted preprocessing strategies, offering a path toward interpretable, efficient diagnostic assistance. Our code is publicly available at https://github.com/LinaZhangUCLA/PathMotionMLLM.</p>
+        <p><a href="https://arxiv.org/abs/2605.03352">Abstract source</a></p>
+      </div>
+    
+  </div>
+</div>
+</li>
+<li><div class="row pub-row" id="exchange-rates">
+  
+  <div class="col-12 pub-info">
+    <div class="title">Crisis-dependent linkages in major exchange rates</div>
+    <div class="author">Oyakhilome Ibhagui, James Evans, Tolulope Fadina, Florian Gerth, and <em>Chong Han</em></div>
+    <div class="periodical">
+      
+        <em>Journal of International Financial Markets, Institutions and Money, 109, 102333, 2026</em>
+      
+    </div>
+    
+    
+    <div class="links">
+      <button type="button" class="btn btn-sm z-depth-0" aria-expanded="false" aria-controls="summary-exchange-rates">summary</button>
+      <button type="button" class="btn btn-sm z-depth-0" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-exchange-rates">abs</button>
+      <a href="https://doi.org/10.1016/j.intfin.2026.102333" class="btn btn-sm z-depth-0">paper</a>
+      
+    </div>
+    <div class="pub-panel" id="summary-exchange-rates" hidden><p>An empirical study of how the relationships among major exchange rates vary across crisis and non-crisis periods.</p></div>
+    
+      <div class="pub-panel" id="abstract-exchange-rates" hidden>
+        <p><strong>Abstract</strong></p><p>This paper investigates why some global crises forge long-term links among major currencies, while others fracture them. We address two important questions in currency markets during crises: (1) whether cointegration relationships of major currencies are preserved across distinct crisis episodes, and (2) whether long-horizon currency returns exhibit lower correlation as currency autonomy strengthens. We present a model in which exchange rates load on global stochastic trends under autonomy. The model implies that the survival of cointegrating relations is determined jointly by the rank of the pass-through matrix and the level of autonomy. We then take our model to market data and empirically analyze five major currency pairs against the U.S. dollar (USD): EUR/USD, GBP/USD, JPY/USD, CHF/USD, and AUD/USD across three regimes: the dot-com crash (1997–2000), the Global Financial Crisis (2007–2009), and the COVID-19 pandemic (2020–2022). We find that the Global Financial Crisis (GFC) uniquely produced a cointegrating relation, with deviations corrected by EUR/USD, CHF/USD, and GBP/USD over two- to five-week half-lives, while the dot-com crash and the COVID-19 pandemic exhibit no cointegration. Our long-horizon correlation results further show that weaker currency return comovement during a crisis is associated with weaker or absent cointegration. Our results also demonstrate that crises differ in their long-run effects: only when shocks are both globally systemic and USD-centered are stable long-run anchors preserved. Overall, we show that systemic USD-centered stress compresses autonomy, which causes currencies to load similarly and yields a stable anchor, while heterogeneous or novel persistent shocks dissolve this cointegration.</p>
+        <p><a href="https://ideas.repec.org/a/eee/intfin/v109y2026ics1042443126000491.html">Abstract source</a></p>
+      </div>
+    
+  </div>
+</div>
+</li></ol>
+</div>
+
+    
+
+    <!-- Social -->
+    
+      <div class="social">
+        <nav class="profile-contacts" aria-label="Contact links">
+  <a href="mailto:chonghan@sas.upenn.edu">Email</a>
+  <a href="https://scholar.google.com/citations?user=S0XnNBwAAAAJ&amp;hl=en">Google Scholar</a>
+  <a href="https://github.com/AuroraCh814">GitHub</a>
+  <a href="https://www.linkedin.com/in/chong-han-539697333/">LinkedIn</a>
+</nav>
+
+
+        <div class="contact-note"></div>
+      </div>
+    
+
+    
+  </article>
+</div>
+
+      
+    </div>
+
+    <!-- Footer -->
+    
+
+
+  <footer class="fixed-bottom" role="contentinfo">
+    <div class="container mt-0">
+      
+  &copy; Copyright 2026
+  Chong
+  
+  Han. <a href="mailto:chonghan@sas.upenn.edu">chonghan@sas.upenn.edu</a>
+  
+  
+
+    </div>
+  </footer>
+
+
+
+    <!-- JavaScripts -->
+    <script defer src="/chonghan/assets/js/site.js"></script>
+
   </body>
 </html>

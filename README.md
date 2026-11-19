@@ -1,18 +1,5 @@
-# Chong Han — Personal Website
+# Chong Han
 
-A static academic website for GitHub Pages.
+Personal academic website: <https://aurorach814.github.io/chonghan/>.
 
-The site uses a simple black-and-white academic layout, Roboto typography, plain text links, and a portrait supplied by Chong Han. No generated images or illustrations are used. Contact: chonghan@sas.upenn.edu.
-
-## Pages
-
-- `index.html`: About and published research
-- `publications/`: Published research
-
-## Publishing
-
-The site is hosted from `AuroraCh814/chonghan` on the `main` branch. GitHub Pages uses **Deploy from a branch → main → / (root)**. The `.nojekyll` file makes GitHub serve the files directly.
-
-## Editing
-
-Edit the HTML files directly. Shared styles and interactions are in `assets/`. This site requires no build system, API keys, or generated image assets.
+The site uses [al-folio](https://github.com/alshedivat/al-folio) and Jekyll Scholar. Edit the [About page](site-src/_pages/about.md) or [publication records](site-src/_bibliography/papers.bib) in `site-src/`. To rebuild after editing, follow the [source README](site-src/README.md). The HTML and assets in the repository root are the generated GitHub Pages site.

@@ -1,0 +1,10 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{% unless page.permalink == '/' %}{{ page.title | capitalize | escape }} | {% endunless %}{{ site.title | escape }}</title>
+<meta name="description" content="{{ site.description | escape }}">
+<meta name="theme-color" content="#ffffff">
+<link rel="icon" href="data:,">
+<link rel="canonical" href="{{ page.url | absolute_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+<link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">

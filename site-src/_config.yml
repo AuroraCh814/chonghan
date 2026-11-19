@@ -1,0 +1,36 @@
+title: Chong Han
+first_name: Chong
+last_name: Han
+lang: en
+description: "Chong Han — robot learning and optimal control at the University of Pennsylvania."
+url: "https://aurorach814.github.io"
+baseurl: "/chonghan"
+max_width: 930px
+navbar_fixed: true
+footer_fixed: true
+footer_text: '<a href="mailto:chonghan@sas.upenn.edu">chonghan@sas.upenn.edu</a>'
+markdown: kramdown
+include: ["_pages"]
+exclude: ["Gemfile", "Gemfile.lock", "README.md", "LICENSE-al-folio", "THIRD-PARTY.md", "bin", "vendor", "node_modules", ".bundle", ".github", "workflow-examples", ".ruby-version"]
+plugins:
+  - jekyll-scholar
+sass:
+  style: compressed
+  sourcemap: never
+scholar:
+  first_name: [Chong]
+  last_name: [Han]
+  source: /_bibliography/
+  bibliography: papers.bib
+  bibliography_template: bib
+  style: apa
+  locale: en
+  replace_strings: true
+  join_strings: true
+  bibtex_filters: []
+  sort_by: none
+  group_by: year
+  group_order: descending
+  query: "@*"
+enable_publication_thumbnails: true
+lazy_loading_images: true

@@ -1,0 +1,45 @@
+# Optional: copy to .github/workflows/al-folio-pages.yml only when using
+# GitHub Actions (instead of a branch) as the repository's Pages source.
+name: Build and deploy al-folio
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - "site-src/**"
+      - ".github/workflows/al-folio-pages.yml"
+permissions:
+  contents: read
+concurrency:
+  group: pages
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    defaults:
+      run:
+        working-directory: site-src
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          working-directory: site-src
+          bundler-cache: true
+      - name: Build
+        run: bash bin/build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site-src/_site
+  deploy:
+    needs: build
+    runs-on: ubuntu-24.04
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    steps:
+      - id: deploy
+        uses: actions/deploy-pages@v4

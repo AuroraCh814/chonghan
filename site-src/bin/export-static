@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Prepare a clean, publishable tree without writing to a Git branch.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+if [ "$#" -ne 1 ]; then
+  echo 'Usage: bin/export-static /absolute/path/to/empty-output' >&2
+  exit 2
+fi
+case "$1" in /*) destination=$1;; *) echo 'Output must be an absolute path.' >&2; exit 2;; esac
+if [ -e "$destination" ] && [ -n "$(ls -A -- "$destination")" ]; then
+  echo 'Output directory already contains files. Choose an empty directory.' >&2
+  exit 2
+fi
+bin/build
+mkdir -p -- "$destination"
+cp -R _site/. "$destination"/
+touch "$destination/.nojekyll"

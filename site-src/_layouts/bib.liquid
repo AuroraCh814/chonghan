@@ -1,0 +1,56 @@
+---
+---
+{%- assign thumb = entry.preview -%}
+<div class="row pub-row{% if thumb %} has-preview{% endif %}" id="{{ entry.key | escape }}">
+  {% if thumb %}
+    <div class="col-sm-3 abbr pub-preview">
+      {% if entry.abbr %}<abbr class="badge rounded w-100">{{ entry.abbr | escape }}</abbr>{% endif %}
+      {% assign image_url = thumb | prepend: '/assets/img/publication_preview/' %}
+      {% if entry.overview %}
+        {% if entry.overview contains '/' %}{% assign overview_url = entry.overview %}{% else %}{% assign overview_url = entry.overview | prepend: '/assets/pdf/' %}{% endif %}
+        <a href="{{ overview_url | relative_url }}" aria-label="View the full-size overview for {{ entry.title | escape }}">
+      {% endif %}
+        {% include figure.liquid path=image_url alt=entry.preview_alt class="preview rounded" loading="lazy" avoid_scaling=true %}
+      {% if entry.overview %}</a>{% endif %}
+    </div>
+  {% endif %}
+  <div class="{% if thumb %}col-sm-9{% else %}col-12{% endif %} pub-info">
+    <div class="title">{{ entry.title }}</div>
+    <div class="author">
+      {%- if entry.display_author -%}
+        {{- entry.display_author -}}
+      {%- else -%}
+      {%- for author in entry.author_array -%}
+        {% unless forloop.first %}{% if author.last == 'others' %}, {% elsif forloop.last and forloop.length > 2 %}, and {% elsif forloop.last %} and {% else %}, {% endif %}{% endunless %}
+        {%- if author.last == 'others' -%}et al.
+        {%- elsif site.scholar.last_name contains author.last and site.scholar.first_name contains author.first -%}
+          <em>{{ author.first }} {{ author.last }}</em>
+        {%- else -%}
+          {{ author.first }} {{ author.last }}
+        {%- endif -%}
+      {%- endfor -%}
+      {%- endif -%}
+    </div>
+    <div class="periodical">
+      {% if entry.review_status %}<em>{{ entry.review_status | escape }}</em>
+      {% else %}
+        <em>{% if entry.journal %}{{ entry.journal }}{% else %}{{ entry.booktitle }}{% endif %}{% if entry.volume %}, {{ entry.volume }}{% endif %}{% if entry.pages %}, {{ entry.pages | replace: '--', '–' }}{% endif %}{% if entry.year %}, {{ entry.year }}{% endif %}</em>
+      {% endif %}
+    </div>
+    {% if entry.additional_info %}<div class="periodical"><strong>{{ entry.additional_info }}</strong></div>{% endif %}
+    {% if entry.note %}<div class="periodical"><strong>{{ entry.note | escape }}</strong></div>{% endif %}
+    <div class="links">
+      {% if entry.summary %}<button type="button" class="btn btn-sm z-depth-0" aria-expanded="false" aria-controls="summary-{{ entry.key }}">summary</button>{% endif %}
+      {% if entry.abstract %}<button type="button" class="btn btn-sm z-depth-0" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-{{ entry.key }}">abs</button>{% endif %}
+      {% if entry.html %}<a href="{{ entry.html | escape }}" class="btn btn-sm z-depth-0">paper</a>{% elsif entry.pdf %}<a href="{{ entry.pdf | relative_url }}" class="btn btn-sm z-depth-0">paper</a>{% endif %}
+      {% if entry.overview %}<a href="{{ overview_url | relative_url }}" class="btn btn-sm z-depth-0">Overview (PDF)</a>{% endif %}
+    </div>
+    {% if entry.summary %}<div class="pub-panel" id="summary-{{ entry.key }}" hidden><p>{{ entry.summary }}</p></div>{% endif %}
+    {% if entry.abstract %}
+      <div class="pub-panel" id="abstract-{{ entry.key }}" hidden>
+        <p><strong>Abstract</strong></p><p>{{ entry.abstract | replace: '\%', '%' }}</p>
+        {% if entry.abstract_source %}<p><a href="{{ entry.abstract_source | escape }}">Abstract source</a></p>{% endif %}
+      </div>
+    {% endif %}
+  </div>
+</div>
