@@ -1,20 +1,33 @@
 ---
 ---
 {%- assign thumb = entry.preview -%}
-<div class="row pub-row{% if thumb %} has-preview{% endif %}" id="{{ entry.key | escape }}">
-  {% if thumb %}
-    <div class="col-sm-3 abbr pub-preview">
-      {% if entry.abbr %}<abbr class="badge rounded w-100">{{ entry.abbr | escape }}</abbr>{% endif %}
-      {% assign image_url = thumb | prepend: '/assets/img/publication_preview/' %}
-      {% if entry.overview %}
-        {% if entry.overview contains '/' %}{% assign overview_url = entry.overview %}{% else %}{% assign overview_url = entry.overview | prepend: '/assets/pdf/' %}{% endif %}
-        <a href="{{ overview_url | relative_url }}" aria-label="View the full-size overview for {{ entry.title | escape }}">
-      {% endif %}
-        {% include figure.liquid path=image_url alt=entry.preview_alt class="preview rounded" loading="lazy" avoid_scaling=true %}
-      {% if entry.overview %}</a>{% endif %}
-    </div>
-  {% endif %}
-  <div class="{% if thumb %}col-sm-9{% else %}col-12{% endif %} pub-info">
+{%- assign venue = entry.venue_label | default: entry.abbr | default: entry.journal | default: entry.booktitle -%}
+{%- if entry.overview -%}
+  {%- if entry.overview contains '/' -%}
+    {%- assign overview_url = entry.overview -%}
+  {%- else -%}
+    {%- assign overview_url = entry.overview | prepend: '/assets/pdf/' -%}
+  {%- endif -%}
+{%- endif -%}
+<div class="pub-row" id="{{ entry.key | escape }}">
+  <div class="pub-preview">
+    {% if venue %}
+      <span class="pub-venue">{{ venue | escape }}</span>
+    {% endif %}
+    {% if thumb %}
+      {%- assign image_url = thumb | prepend: '/assets/img/publication_preview/' | relative_url -%}
+      <figure class="pub-figure">
+        {% if entry.overview %}
+          <a href="{{ overview_url | relative_url }}" aria-label="View the full-size overview for {{ entry.title | escape }}">
+        {% elsif entry.preview_source %}
+          <a href="{{ entry.preview_source | escape }}">
+        {% endif %}
+          <img class="preview rounded" src="{{ image_url }}" alt="{{ entry.preview_alt | default: entry.title | escape }}" width="{{ entry.preview_width }}" height="{{ entry.preview_height }}" loading="lazy" decoding="async">
+        {% if entry.overview or entry.preview_source %}</a>{% endif %}
+      </figure>
+    {% endif %}
+  </div>
+  <div class="pub-info">
     <div class="title">{{ entry.title }}</div>
     <div class="author">
       {%- if entry.display_author -%}

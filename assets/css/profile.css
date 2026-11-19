@@ -10,8 +10,3 @@
 .profile-contacts { display: flex; justify-content: center; flex-wrap: wrap; gap: .28rem 0; margin: 2rem 0 1.2rem; font-size: 1rem; }
 .profile-contacts a { color: inherit; text-decoration: underline; text-underline-offset: .18em; }
 .profile-contacts a + a::before { content: "/"; display: inline-block; padding: 0 .65rem; color: #777; }
-.publications .row .preview { width: 100%; height: auto; object-fit: contain; }
-@media (max-width: 575px) {
-  .publications .row:has(.preview) { display: grid; grid-template-columns: clamp(76px, 25%, 115px) minmax(0, 1fr); gap: 14px; margin-left: 0; margin-right: 0; }
-  .publications .row:has(.preview) > div { max-width: 100%; padding-left: 0; padding-right: 0; }
-}

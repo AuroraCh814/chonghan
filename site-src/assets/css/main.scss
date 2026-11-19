@@ -30,12 +30,55 @@ body { font-family: Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 30
 .publications ol.bibliography li .pub-panel { margin-top: .65rem; }
 .publications ol.bibliography li .pub-panel p { margin: 0 0 .5rem; }
 .publications ol.bibliography li .pub-panel[hidden] { display: none; }
-.publications ol.bibliography li .pub-row { align-items: flex-start; }
-.publications .pub-preview figure { margin: 0; }
-.publications .pub-preview img { display: block; width:100%; max-width:250px; height:auto; object-fit: contain; }
-.publications .pub-info { min-width:0; }
-@media (max-width:575.98px) {
-  .publications .pub-row.has-preview { flex-wrap: nowrap; }
-  .publications .has-preview .pub-preview { flex: 0 0 27%; max-width:27%; padding-right:5px; }
-  .publications .has-preview .pub-info { flex: 1 1 auto; padding-left:5px; }
+// All entries share the same left column, including entries without a figure.
+.publications .pub-row {
+  display: grid;
+  grid-template-columns: minmax(0, 23%) minmax(0, 1fr);
+  align-items: start;
+  column-gap: 1.875rem;
+  scroll-margin-top: 5rem;
+}
+
+.publications .pub-venue {
+  display: block;
+  background: var(--global-text-color);
+  color: var(--global-bg-color);
+  padding: .3rem .45rem;
+  border-radius: .2rem;
+  font-size: .8125rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.publications .pub-figure {
+  margin: .5rem 0 0;
+}
+.publications .pub-figure a {
+  display: block;
+}
+.publications .pub-figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+.publications .pub-info {
+  min-width: 0;
+}
+.publications .links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .3rem;
+}
+@media (max-width: 575.98px) {
+  .publications .pub-row {
+    grid-template-columns: minmax(5rem, 26%) minmax(0, 1fr);
+    column-gap: .875rem;
+  }
+  .publications .pub-venue {
+    font-size: .75rem;
+    padding: .25rem;
+  }
 }
