@@ -14,8 +14,7 @@ academic theme. See `THIRD-PARTY.md` for the imported theme components and licen
   The primary BibTeX `author` field uses normal `and`-separated names in credit
   order; `display_author` optionally gives a shorter author line.
 - `abstract` and `summary` are independently collapsible. `html` links to a
-  published paper; `overview` (a filename in `assets/pdf/`) links specifically
-  to a project overview. `review_status` replaces the venue/year line when
+  published paper. `review_status` replaces the venue/year line when
   a manuscript has no published venue.
 - Set `venue_label` to the conference or journal name to show at the top of
   the left column. The left column remains aligned and unfilled below the
@@ -23,11 +22,11 @@ academic theme. See `THIRD-PARTY.md` for the imported theme components and licen
 - Put paper figures in `assets/img/publication_preview/`. Set `preview` to
   the filename, `preview_width` and `preview_height` to the image dimensions,
   `preview_alt` to a description, and `preview_source` to the paper or figure
-  URL. For an attached overview PDF, use the existing `overview` field.
+  URL for the figure’s provenance.
 
 The S³ thumbnail is Figure 2 from the [ICML paper](https://proceedings.mlr.press/v306/zhang26el.html).
 The pilot-study thumbnail is Figure 1 from the [EMBC paper](https://arxiv.org/abs/2605.03352).
-Both thumbnails link to their original figures.
+Click a thumbnail to see the larger figure in the page.
 - `assets/css/profile.css`: site-specific refinements on top of al-folio.
 
 ## Build and preview

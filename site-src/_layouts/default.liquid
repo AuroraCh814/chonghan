@@ -50,6 +50,16 @@
     <!-- Footer -->
     {% include footer.liquid %}
 
+    <dialog class="pub-figure-dialog" aria-labelledby="pub-figure-title">
+      <div class="pub-figure-dialog-header">
+        <h2 id="pub-figure-title">Publication figure</h2>
+        <form method="dialog">
+          <button class="pub-figure-close" type="submit" autofocus>Close</button>
+        </form>
+      </div>
+      <img class="pub-figure-full" alt="">
+    </dialog>
+
     <!-- JavaScripts -->
     {% include scripts.liquid %}
   </body>

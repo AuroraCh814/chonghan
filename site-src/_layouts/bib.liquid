@@ -2,13 +2,6 @@
 ---
 {%- assign thumb = entry.preview -%}
 {%- assign venue = entry.venue_label | default: entry.abbr | default: entry.journal | default: entry.booktitle -%}
-{%- if entry.overview -%}
-  {%- if entry.overview contains '/' -%}
-    {%- assign overview_url = entry.overview -%}
-  {%- else -%}
-    {%- assign overview_url = entry.overview | prepend: '/assets/pdf/' -%}
-  {%- endif -%}
-{%- endif -%}
 <div class="pub-row" id="{{ entry.key | escape }}">
   <div class="pub-preview">
     {% if venue %}
@@ -17,13 +10,9 @@
     {% if thumb %}
       {%- assign image_url = thumb | prepend: '/assets/img/publication_preview/' | relative_url -%}
       <figure class="pub-figure">
-        {% if entry.overview %}
-          <a href="{{ overview_url | relative_url }}" aria-label="View the full-size overview for {{ entry.title | escape }}">
-        {% elsif entry.preview_source %}
-          <a href="{{ entry.preview_source | escape }}">
-        {% endif %}
+        <a class="pub-figure-trigger" href="{{ image_url }}" aria-haspopup="dialog" aria-label="Enlarge figure for {{ entry.title | strip_html | escape }}" title="Click to enlarge">
           <img class="preview rounded" src="{{ image_url }}" alt="{{ entry.preview_alt | default: entry.title | escape }}" width="{{ entry.preview_width }}" height="{{ entry.preview_height }}" loading="lazy" decoding="async">
-        {% if entry.overview or entry.preview_source %}</a>{% endif %}
+        </a>
       </figure>
     {% endif %}
   </div>
@@ -56,7 +45,6 @@
       {% if entry.summary %}<button type="button" class="btn btn-sm z-depth-0" aria-expanded="false" aria-controls="summary-{{ entry.key }}">summary</button>{% endif %}
       {% if entry.abstract %}<button type="button" class="btn btn-sm z-depth-0" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-{{ entry.key }}">abs</button>{% endif %}
       {% if entry.html %}<a href="{{ entry.html | escape }}" class="btn btn-sm z-depth-0">paper</a>{% elsif entry.pdf %}<a href="{{ entry.pdf | relative_url }}" class="btn btn-sm z-depth-0">paper</a>{% endif %}
-      {% if entry.overview %}<a href="{{ overview_url | relative_url }}" class="btn btn-sm z-depth-0">Overview (PDF)</a>{% endif %}
     </div>
     {% if entry.summary %}<div class="pub-panel" id="summary-{{ entry.key }}" hidden><p>{{ entry.summary }}</p></div>{% endif %}
     {% if entry.abstract %}

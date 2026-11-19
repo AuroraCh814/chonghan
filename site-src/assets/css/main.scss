@@ -31,6 +31,10 @@ body { font-family: Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 30
 .publications ol.bibliography li .pub-panel p { margin: 0 0 .5rem; }
 .publications ol.bibliography li .pub-panel[hidden] { display: none; }
 // All entries share the same left column, including entries without a figure.
+.publications ol.bibliography > li:not(:last-child) {
+  margin-bottom: 2.125rem;
+}
+
 .publications .pub-row {
   display: grid;
   grid-template-columns: minmax(0, 23%) minmax(0, 1fr);
@@ -41,8 +45,8 @@ body { font-family: Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 30
 
 .publications .pub-venue {
   display: block;
-  background: var(--global-text-color);
-  color: var(--global-bg-color);
+  background: #2774ae;
+  color: #fff;
   padding: .3rem .45rem;
   border-radius: .2rem;
   font-size: .8125rem;
@@ -55,8 +59,13 @@ body { font-family: Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 30
 .publications .pub-figure {
   margin: .5rem 0 0;
 }
-.publications .pub-figure a {
+.pub-figure-trigger {
   display: block;
+  cursor: zoom-in;
+}
+.pub-figure-trigger:focus-visible, .pub-figure-close:focus-visible {
+  outline: 2px solid #2774ae;
+  outline-offset: 3px;
 }
 .publications .pub-figure img {
   display: block;
@@ -72,7 +81,61 @@ body { font-family: Roboto, "Helvetica Neue", Arial, sans-serif; font-weight: 30
   flex-wrap: wrap;
   gap: .3rem;
 }
+.pub-figure-dialog {
+  box-sizing: border-box;
+  width: max-content;
+  max-width: unquote("min(75rem, calc(100% - 2rem))");
+  max-height: calc(100% - 2rem);
+  overflow: auto;
+  margin: auto;
+  border: 0;
+  border-radius: .375rem;
+  padding: 1rem;
+  color: var(--global-text-color);
+  background: var(--global-bg-color);
+}
+.pub-figure-dialog::backdrop {
+  background: rgba(0, 0, 0, .72);
+}
+.pub-figure-dialog-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: .75rem;
+}
+.pub-figure-dialog-header h2 {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 600;
+}
+.pub-figure-close {
+  border: 1px solid currentColor;
+  border-radius: .2rem;
+  padding: .2rem .55rem;
+  color: inherit;
+  background: transparent;
+  cursor: pointer;
+  font-size: .875rem;
+}
+.pub-figure-full {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: calc(100vh - 8rem);
+  max-height: calc(100dvh - 8rem);
+  margin: auto;
+  object-fit: contain;
+}
+body:has(.pub-figure-dialog[open]) {
+  overflow: hidden;
+}
 @media (max-width: 575.98px) {
+  .publications ol.bibliography > li:not(:last-child) {
+    margin-bottom: 1.625rem;
+  }
   .publications .pub-row {
     grid-template-columns: minmax(5rem, 26%) minmax(0, 1fr);
     column-gap: .875rem;
