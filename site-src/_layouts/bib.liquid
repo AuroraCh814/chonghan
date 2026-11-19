@@ -56,7 +56,6 @@
       {% assign paper_url = entry.html %}
       {% if paper_url == nil and entry.pdf %}{% assign paper_url = entry.pdf | relative_url %}{% endif %}
       {% if paper_url %}<a href="{{ paper_url | escape }}" class="btn btn-sm z-depth-0 paper-link" target="_blank" rel="noopener noreferrer" aria-label="paper (opens in a new tab)" title="Open paper in a new tab">paper <span aria-hidden="true">↗</span></a>{% endif %}
-      {% if entry.venue_url %}<a href="{{ entry.venue_url | escape }}" class="btn btn-sm z-depth-0" target="_blank" rel="noopener noreferrer" aria-label="conference program (opens in a new tab)" title="Open conference program in a new tab">program <span aria-hidden="true">↗</span></a>{% endif %}
     </div>
     {% if entry.summary %}<div class="pub-panel" id="summary-{{ entry.key }}" hidden><p>{{ entry.summary }}</p></div>{% endif %}
     {% if entry.abstract %}
