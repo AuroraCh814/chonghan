@@ -53,7 +53,7 @@
     <div class="links">
       {% if entry.summary %}<button type="button" class="btn btn-sm z-depth-0" aria-expanded="false" aria-controls="summary-{{ entry.key }}">summary</button>{% endif %}
       {% if entry.abstract %}<button type="button" class="btn btn-sm z-depth-0" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-{{ entry.key }}">abs</button>{% endif %}
-      {% if entry.html %}<a href="{{ entry.html | escape }}" class="btn btn-sm z-depth-0">paper</a>{% elsif entry.pdf %}<a href="{{ entry.pdf | relative_url }}" class="btn btn-sm z-depth-0">paper</a>{% endif %}
+      {% if entry.html %}<a href="{{ entry.html | escape }}" class="btn btn-sm z-depth-0" target="_blank" rel="noopener noreferrer">paper</a>{% elsif entry.pdf %}<a href="{{ entry.pdf | relative_url }}" class="btn btn-sm z-depth-0" target="_blank" rel="noopener noreferrer">paper</a>{% endif %}
     </div>
     {% if entry.summary %}<div class="pub-panel" id="summary-{{ entry.key }}" hidden><p>{{ entry.summary }}</p></div>{% endif %}
     {% if entry.abstract %}
