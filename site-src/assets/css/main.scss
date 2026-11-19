@@ -145,3 +145,28 @@ body:has(.pub-figure-dialog[open]) {
     padding: .25rem;
   }
 }
+
+// Keep the abbreviated byline on the same line as the visible authors.
+.publications .author-toggle {
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  margin: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: .15em;
+}
+.publications .author-toggle[aria-expanded="true"] {
+  margin-left: .5rem;
+  font-size: .8125em;
+  white-space: nowrap;
+}
+.publications .author-toggle:focus-visible {
+  outline: 2px solid #2774ae;
+  outline-offset: 3px;
+}
+.publications .coauthors[hidden] {
+  display: none;
+}

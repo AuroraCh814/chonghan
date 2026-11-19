@@ -19,18 +19,27 @@
   <div class="pub-info">
     <div class="title">{{ entry.title }}</div>
     <div class="author">
-      {%- if entry.display_author -%}
-        {{- entry.display_author -}}
-      {%- else -%}
+      {%- assign author_count = entry.author_array | size -%}
+      {%- assign shown = entry.author_preview_count | default: author_count | plus: 0 -%}
+      {%- assign shown = shown | at_least: 1 | at_most: author_count -%}
       {%- for author in entry.author_array -%}
-        {% unless forloop.first %}{% if author.last == 'others' %}, {% elsif forloop.last and forloop.length > 2 %}, and {% elsif forloop.last %} and {% else %}, {% endif %}{% endunless %}
-        {%- if author.last == 'others' -%}et al.
-        {%- elsif site.scholar.last_name contains author.last and site.scholar.first_name contains author.first -%}
-          <em>{{ author.first }} {{ author.last }}</em>
+        {%- unless forloop.first -%}
+          {%- if forloop.index0 == shown -%}
+            {{- ', ' -}}<span id="coauthors-{{ entry.key | escape }}" class="coauthors" hidden>{% if forloop.last %}and {% endif %}
+          {%- elsif forloop.last -%}
+            {%- if author_count > 2 -%}{{ ', and ' }}{%- else -%}{{ ' and ' }}{%- endif -%}
+          {%- else -%}
+            {{- ', ' -}}
+          {%- endif -%}
+        {%- endunless -%}
+        {%- if site.scholar.last_name contains author.last and site.scholar.first_name contains author.first -%}
+          <em>{{ author.first | escape }} {{ author.last | escape }}</em>
         {%- else -%}
-          {{ author.first }} {{ author.last }}
+          {{ author.first | escape }} {{ author.last | escape }}
         {%- endif -%}
       {%- endfor -%}
+      {%- if shown < author_count -%}
+        </span><button type="button" class="author-toggle" aria-expanded="false" aria-controls="coauthors-{{ entry.key | escape }}" data-author-toggle>et al.</button>
       {%- endif -%}
     </div>
     <div class="periodical">

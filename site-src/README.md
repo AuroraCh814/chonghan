@@ -12,7 +12,8 @@ academic theme. See `THIRD-PARTY.md` for the imported theme components and licen
 - `_bibliography/papers.bib`: publication records shared between both pages.
   Set `selected = {true}` to include a paper on the About page.
   The primary BibTeX `author` field uses normal `and`-separated names in credit
-  order; `display_author` optionally gives a shorter author line.
+  order. Set `author_preview_count` to choose how many authors appear before
+  the expandable “et al.” button.
 - `abstract` and `summary` are independently collapsible. `html` links to a
   published paper. `review_status` replaces the venue/year line when
   a manuscript has no published venue.

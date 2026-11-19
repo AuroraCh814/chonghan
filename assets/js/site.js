@@ -5,6 +5,9 @@ document.querySelectorAll('.publications button[aria-controls]').forEach(button 
   button.addEventListener('click', () => {
     panel.hidden = !panel.hidden;
     button.setAttribute('aria-expanded', String(!panel.hidden));
+    if (button.hasAttribute('data-author-toggle')) {
+      button.textContent = panel.hidden ? 'et al.' : 'show fewer';
+    }
   });
 });
 
