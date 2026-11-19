@@ -164,7 +164,43 @@
         <a href="/chonghan/publications/" style="color: inherit">Selected Publications</a>
       </h2>
       <div class="publications">
-  <ol class="bibliography"><li><div class="pub-row" id="power-permutations">
+  <ol class="bibliography"><li><div class="pub-row" id="cleanguide">
+  <div class="pub-preview">
+    
+      <span class="pub-venue">ICRA 2027</span>
+    
+    <figure class="pub-figure">
+        <a class="pub-figure-trigger" href="/chonghan/assets/img/publication_preview/cleanguide-overview.png" aria-haspopup="dialog" aria-label="Enlarge figure for CleanGuide: Clean-Action-Aligned Guidance for Deployment-Time Adaptation of Diffusion Policies" title="Click to enlarge">
+          <img class="preview rounded" src="/chonghan/assets/img/publication_preview/cleanguide-overview.png" alt="CleanGuide samples candidate clean action sequences, weights them by deployment cost, and guides the next denoising step." width="1920" height="835" loading="lazy" decoding="async">
+        </a>
+      </figure>
+    
+  </div>
+  <div class="pub-info">
+    <div class="title">CleanGuide: Clean-Action-Aligned Guidance for Deployment-Time Adaptation of Diffusion Policies</div>
+    <div class="author">Seunghun Oh, <em>Chong Han</em>, and Chen Tang</div>
+    <div class="periodical">
+      <em>Under review at ICRA 2027</em>
+      
+    </div>
+    
+    
+    <div class="links">
+      
+      <button type="button" class="btn btn-sm z-depth-0" aria-label="Abstract" aria-expanded="false" aria-controls="abstract-cleanguide">abs</button>
+      
+    </div>
+    
+    
+      <div class="pub-panel" id="abstract-cleanguide" hidden>
+        <p><strong>Abstract</strong></p><p>Diffusion policies provide expressive priors over multimodal action chunks, but may be misaligned with deployment-time objectives unseen during training. Gradient-free guidance can adapt a frozen policy to these objectives using only forward cost evaluations. However, guidance operates at intermediate denoising steps, whereas the deployment cost is naturally defined on the rollout induced by an executable clean action chunk. Existing methods bridge this gap with reverse-space guidance proxies that may not faithfully reflect the final clean-action cost. We introduce CleanGuide, a training-free deployment-time adaptation method that resolves this mismatch by deriving its denoising target directly in executable clean-action space, where deployment costs are evaluated. We further introduce a schedule-aware local Gaussian proposal to efficiently generate clean-action candidates online. This clean-action formulation and efficient approximation allow CleanGuide to achieve the strongest overall task performance while enhancing trajectory efficiency and maintaining low inference latency. Across Simple2D, NarrowPassage, and U-trap with unseen obstacles, CleanGuide achieves the highest or tied-highest success rates of 99%, 89%, and 100%, respectively. In 7-DoF Panda motion planning, it achieves 79.4% success, with 31% lower per-cycle replanning time and a 20% lower detour ratio than the strongest baseline. On four MuJoCo residual-reward tasks, CleanGuide achieves the best total return among gradient-free baselines.</p>
+        
+      </div>
+    
+  </div>
+</div>
+</li>
+<li><div class="pub-row" id="power-permutations">
   <div class="pub-preview">
     
       <span class="pub-venue">Ars Combinatoria</span>
